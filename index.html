@@ -1,185 +1,210 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>كوافير بداية - BIDA BEAUTY CENTER</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #fcf8f9;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        .header {
-            background: linear-gradient(135deg, #d81b60, #8e24aa);
-            color: white;
-            padding: 30px 15px;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 28px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-        .header p {
-            margin: 8px 0 0;
-            font-size: 15px;
-            color: #f8bbd0;
-        }
-        .container {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 0 15px;
-        }
-        .card {
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-            margin-bottom: 20px;
-            border: 1px solid #f8bbd0;
-        }
-        .hero-img {
-            width: 100%;
-            max-height: 250px;
-            object-fit: cover;
-            border-radius: 12px;
-            margin-bottom: 15px;
-        }
-        h2 {
-            color: #8e24aa;
-            font-size: 20px;
-            border-bottom: 2px solid #f8bbd0;
-            display: inline-block;
-            padding-bottom: 5px;
-            margin-top: 10px;
-        }
-        p.desc {
-            color: #4a148c;
-            font-size: 15px;
-            line-height: 1.7;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
-        th, td {
-            padding: 12px 10px;
-            border-bottom: 1px solid #f3e5f5;
-            text-align: right;
-            font-size: 14px;
-        }
-        th {
-            background-color: #f3e5f5;
-            color: #8e24aa;
-            font-weight: bold;
-        }
-        td.price {
-            text-align: left;
-            color: #d81b60;
-            font-weight: bold;
-        }
-        .btn {
-            display: block;
-            width: 100%;
-            padding: 14px 0;
-            margin: 10px 0;
-            border-radius: 10px;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-            transition: 0.3s;
-            box-sizing: border-box;
-        }
-        .btn-whatsapp {
-            background-color: #25d366;
-            color: white;
-            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
-        }
-        .btn-map {
-            background-color: #e91e63;
-            color: white;
-            box-shadow: 0 4px 10px rgba(233, 30, 99, 0.3);
-        }
-        .footer {
-            margin-top: 30px;
-            padding: 15px;
-            font-size: 13px;
-            color: #777;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>كوافير بداية | BIDA BEAUTY CENTER</title>
+<meta name="description" content="كوافير بداية - بيوتي سنتر: بروتين وترميم الشعر، ميك أب سواريه، هيدرافيشل، وتجهيز العرائس">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fffaf5; --card:#ffffff; --ink:#2d1b3d; --muted:#6f5d80;
+  --purple:#5b2a86; --purple-d:#3d1860; --pink:#e8a0bf; --soft:#fbeaf2;
+  --gold:#c9a24b; --gold-l:#f0d58a; --line:#f1e3ee;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#1a0f26; --card:#2a1a3b; --ink:#f4ecfa; --muted:#bfaed0;
+    --soft:#2f1d42; --line:#3d2a52; --purple:#d9b8f5;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1a0f26; --card:#2a1a3b; --ink:#f4ecfa; --muted:#bfaed0;
+  --soft:#2f1d42; --line:#3d2a52; --purple:#d9b8f5;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+body{font-family:'Cairo',system-ui,-apple-system,'Segoe UI',Tahoma,sans-serif;background:var(--bg);color:var(--ink);line-height:1.8;overflow-x:hidden}
+
+/* الهيدر */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:linear-gradient(135deg,#3d1860,#5b2a86);padding:10px 16px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 4px 18px rgba(61,24,96,.35)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:#3d1860;z-index:60}
+.brand{display:flex;align-items:center;gap:10px}
+.logo{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--gold-l),var(--gold));display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:23px;color:#3d1860;box-shadow:0 0 0 3px rgba(240,213,138,.35)}
+.brand h1{font-size:17px;font-weight:800;color:#fff;line-height:1.3}
+.brand span{font-family:'Playfair Display',serif;font-size:10.5px;letter-spacing:2px;color:var(--gold-l)}
+.head-btn{background:var(--gold);color:#3d1860;text-decoration:none;font-weight:700;font-size:13px;padding:8px 14px;border-radius:30px}
+
+/* القسم الرئيسي */
+.hero{position:relative;text-align:center;color:#fff;padding:44px 20px 80px;background:linear-gradient(170deg,#3d1860 0%,#5b2a86 55%,#b9679a 100%);overflow:hidden}
+.hero::after{content:"";position:absolute;bottom:-1px;left:0;right:0;height:46px;background:var(--bg);clip-path:ellipse(75% 100% at 50% 100%)}
+.arch{width:150px;height:190px;margin:0 auto 22px;border-radius:75px 75px 14px 14px;border:2px solid var(--gold-l);display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.08);box-shadow:0 0 0 8px rgba(240,213,138,.12)}
+.arch b{font-family:'Playfair Display',serif;font-size:78px;font-weight:700;color:var(--gold-l);line-height:1}
+.hero h2{font-size:clamp(28px,8vw,40px);font-weight:800;line-height:1.5;margin-bottom:10px}
+.hero p{font-size:16px;opacity:.95;max-width:480px;margin:0 auto 26px}
+.cta-row{display:flex;flex-direction:column;gap:12px;align-items:center}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;max-width:340px;padding:15px 22px;border-radius:50px;font-family:inherit;font-size:17px;font-weight:700;text-decoration:none;transition:transform .2s}
+.btn:active{transform:scale(.97)}
+.btn svg{width:22px;height:22px;flex-shrink:0}
+.btn:focus-visible,.book:focus-visible,.head-btn:focus-visible{outline:3px solid var(--gold-l);outline-offset:3px}
+.btn-wa{background:linear-gradient(135deg,#25d366,#128c4a);color:#fff;box-shadow:0 8px 22px rgba(37,211,102,.4)}
+.btn-map{background:linear-gradient(135deg,var(--gold-l),var(--gold));color:#3d1860;box-shadow:0 8px 22px rgba(201,162,75,.4)}
+
+/* الأقسام */
+section{padding:44px 18px}
+.sec-title{text-align:center;margin-bottom:28px}
+.sec-title h3{font-size:27px;font-weight:800;color:var(--purple)}
+.sec-title .line{width:70px;height:3px;margin:8px auto 0;border-radius:3px;background:linear-gradient(90deg,var(--pink),var(--gold))}
+.services{display:grid;gap:16px;max-width:900px;margin:0 auto}
+.card{background:var(--card);border-radius:22px;padding:24px 20px;border:1px solid var(--line);box-shadow:0 8px 26px rgba(91,42,134,.10);position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;top:0;right:0;left:0;height:5px;background:linear-gradient(90deg,var(--purple),var(--pink),var(--gold))}
+.icon{width:56px;height:56px;border-radius:18px;background:var(--soft);display:flex;align-items:center;justify-content:center;font-size:29px;margin-bottom:10px}
+.card h4{font-size:20px;font-weight:800;color:var(--purple);margin-bottom:4px}
+.card p{font-size:15px;color:var(--muted);margin-bottom:10px}
+.card ul{list-style:none;margin-bottom:16px}
+.card li{font-size:14.5px;padding-right:22px;position:relative}
+.card li::before{content:"✦";position:absolute;right:0;color:var(--gold)}
+.book{display:inline-block;text-decoration:none;background:#5b2a86;color:#fff;padding:9px 22px;border-radius:30px;font-size:14px;font-weight:700}
+.badge{position:absolute;top:16px;left:16px;background:linear-gradient(135deg,var(--gold-l),var(--gold));color:#3d1860;font-size:12px;font-weight:800;padding:2px 12px;border-radius:30px}
+
+.why{background:var(--soft)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:700px;margin:0 auto}
+.why-item{background:var(--card);border-radius:18px;padding:18px 10px;text-align:center;border:1px solid var(--line)}
+.why-item b{display:block;font-size:26px}
+.why-item span{font-size:14px;font-weight:600;color:var(--purple)}
+
+.final{text-align:center;color:#fff;background:linear-gradient(135deg,#3d1860,#5b2a86)}
+.final h3{font-size:26px;font-weight:800;margin-bottom:6px}
+.final p{opacity:.92;margin-bottom:22px}
+
+footer{background:#24103a;color:#cdbfe0;text-align:center;padding:26px 16px;font-size:13.5px}
+footer .fb{color:var(--gold-l);font-weight:800;font-size:17px}
+footer .en{font-family:'Playfair Display',serif;letter-spacing:3px;font-size:11px;color:var(--pink)}
+footer p{margin-top:8px}
+
+.float-wa{position:fixed;bottom:calc(18px + env(safe-area-inset-bottom,0px));left:18px;z-index:55;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.3)}
+.float-wa svg{width:32px;height:32px}
+
+@media(min-width:700px){
+  .services{grid-template-columns:1fr 1fr}
+  .cta-row{flex-direction:row;justify-content:center}
+  .btn{width:auto;min-width:230px}
+}
+</style>
 </head>
 <body>
 
-    <!-- الشريط العلوي -->
-    <div class="header">
-        <h1>كوافير بداية ✨</h1>
-        <p>عالم الجمال والعناية المتكاملة بالمرأة</p>
+<header>
+  <div class="brand">
+    <div class="logo">B</div>
+    <div><h1>كوافير بداية</h1><span>BIDA BEAUTY CENTER</span></div>
+  </div>
+  <a class="head-btn" href="#book">احجزي الآن</a>
+</header>
+
+<div class="hero">
+  <div class="arch"><b>B</b></div>
+  <h2>جمالك يبدأ من بداية</h2>
+  <p>عناية راقية بالشعر والبشرة، وإطلالات ميك أب تُبرز أنوثتك وتليق بكل مناسباتك.</p>
+  <div class="cta-row">
+    <a class="btn btn-wa wa-link" href="#" data-service="">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.5 12.4c-.3-.1-1.7-.8-2-.9s-.5-.1-.7.1-.8.9-.9 1.1-.3.2-.6.1c-1-.5-2-1.200-2.800-2.400-.2-.4.2-.4.600-1.200.1-.2 0-.3 0-.5l-.9-2.100c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.500s1.100 2.900 1.200 3.100c.1.2 2.100 3.200 5.100 4.500 1.900.8 2.600.7 3.500.6.6-.1 1.700-.7 2-1.400.2-.7.2-1.300.2-1.400s-.3-.2-.6-.3z"/></svg>
+      احجزي عبر واتساب
+    </a>
+    <a class="btn btn-map map-link" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 00-7 7c0 5.200 7 13 7 13s7-7.800 7-13a7 7 0 00-7-7zm0 9.500A2.500 2.500 0 119.500 9 2.500 2.500 0 0112 11.500z"/></svg>
+      موقعنا على الخريطة
+    </a>
+  </div>
+</div>
+
+<section id="services">
+  <div class="sec-title"><h3>خدماتنا وعروضنا</h3><div class="line"></div></div>
+  <div class="services">
+    <div class="card">
+      <span class="badge">الأكثر طلباً</span>
+      <div class="icon">💆‍♀️</div>
+      <h4>بروتين وترميم الشعر</h4>
+      <p>عودي لشعر ناعم ولامع وصحي.</p>
+      <ul><li>علاج بروتين للتنعيم والفرد</li><li>ترميم عميق للشعر التالف</li><li>منتجات عالية الجودة</li></ul>
+      <a class="book wa-link" href="#" data-service="بروتين وترميم الشعر">احجزي الخدمة</a>
     </div>
-
-    <div class="container">
-        <!-- كارت المحتوى الرئيسي -->
-        <div class="card">
-            <img class="hero-img" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop" alt="صورة الجمال والعناية">
-            <h2>مرحباً بكِ في كوافير بداية 🌸</h2>
-            <p class="desc">
-                يقدم لكِ أفضل خدمات العناية بالشعر، البروتين، الميك أب، وتنظيف البشرة بأعلى جودة وأفضل الأسعار على أيدي متخصصات احترافيات.
-            </p>
-        </div>
-
-        <!-- قائمة الخدمات -->
-        <div class="card">
-            <h2>قائمة الخدمات والعروض 👑</h2>
-            <table>
-                <tr>
-                    <th>الخدمة</th>
-                    <th style="text-align: left;">السعر</th>
-                </tr>
-                <tr>
-                    <td>جلسة بروتين / ترميم شعر</td>
-                    <td class="price">حسب الطول</td>
-                </tr>
-                <tr>
-                    <td>ميك أب سواريه كامل</td>
-                    <td class="price">مميز جداً</td>
-                </tr>
-                <tr>
-                    <td>جلسة تنظيف بشرة عميق (Hydrafacial)</td>
-                    <td class="price">عرض خاص</td>
-                </tr>
-                <tr>
-                    <td>قص + استشوار + بيبي ليس</td>
-                    <td class="price">بأقل تكلفة</td>
-                </tr>
-                <tr>
-                    <td>تجهيز عرائس متكامل</td>
-                    <td class="price">خصم خاص 🎁</td>
-                </tr>
-            </table>
-        </div>
-
-        <!-- أزرار التواصل والتفاعل -->
-        <div class="card">
-            <h2>توصلي معنا وحجزي ميعادك 📞</h2>
-            <a href="https://wa.me/201090000000?text=السلام%20عليكم،%20حابة%20أستفسر%20عن%20عروض%20كوافير%20بداية" target="_blank" class="btn btn-whatsapp">
-                💬 احجزي الآن عبر الواتساب
-            </a>
-            <a href="https://maps.google.com" target="_blank" class="btn btn-map">
-                📍 موقعنا على الخريطة
-            </a>
-        </div>
+    <div class="card">
+      <div class="icon">💄</div>
+      <h4>ميك أب سواريه</h4>
+      <p>إطلالة ساحرة في كل مناسبة.</p>
+      <ul><li>ميك أب سهرات وحفلات</li><li>ثبات طويل وتقنيات احترافية</li><li>ألوان تناسب بشرتك وإطلالتك</li></ul>
+      <a class="book wa-link" href="#" data-service="ميك أب سواريه">احجزي الخدمة</a>
     </div>
-
-    <div class="footer">
-        جميع الحقوق محفوظة © كوافير بداية
+    <div class="card">
+      <span class="badge">جديد</span>
+      <div class="icon">✨</div>
+      <h4>تنظيف بشرة Hydrafacial</h4>
+      <p>نضارة فورية وبشرة صافية مرتوية.</p>
+      <ul><li>تنظيف عميق وتقشير لطيف</li><li>ترطيب مكثف وتغذية للبشرة</li><li>نتيجة واضحة من الجلسة الأولى</li></ul>
+      <a class="book wa-link" href="#" data-service="تنظيف بشرة Hydrafacial">احجزي الخدمة</a>
     </div>
+    <div class="card">
+      <span class="badge">باقات خاصة</span>
+      <div class="icon">👰‍♀️</div>
+      <h4>تجهيز العرائس</h4>
+      <p>ليومك الأجمل نصنع لكِ إطلالة العمر.</p>
+      <ul><li>تسريحة وميك أب العروس</li><li>جلسة تجريبية قبل الزفاف</li><li>عناية بالبشرة والشعر قبل الفرح</li></ul>
+      <a class="book wa-link" href="#" data-service="تجهيز العرائس">احجزي الخدمة</a>
+    </div>
+  </div>
+</section>
 
+<section class="why">
+  <div class="sec-title"><h3>لماذا بداية؟</h3><div class="line"></div></div>
+  <div class="why-grid">
+    <div class="why-item"><b>👩‍🎨</b><span>خبيرات محترفات</span></div>
+    <div class="why-item"><b>🧴</b><span>منتجات أصلية</span></div>
+    <div class="why-item"><b>🧼</b><span>نظافة وتعقيم</span></div>
+    <div class="why-item"><b>💎</b><span>خدمة راقية</span></div>
+  </div>
+</section>
+
+<section class="final" id="book">
+  <h3>جاهزة لإطلالتك الجديدة؟</h3>
+  <p>تواصلي معنا واحجزي موعدك بسهولة.</p>
+  <div class="cta-row">
+    <a class="btn btn-wa wa-link" href="#" data-service="">احجزي عبر واتساب</a>
+    <a class="btn btn-map map-link" href="#" target="_blank" rel="noopener">افتحي الموقع على الخريطة</a>
+  </div>
+</section>
+
+<footer>
+  <div class="fb">كوافير بداية - بيوتي سنتر</div>
+  <div class="en">BIDA BEAUTY CENTER</div>
+  <p>© <span id="yr">2026</span> جميع الحقوق محفوظة</p>
+</footer>
+
+<a class="float-wa wa-link" href="#" data-service="" aria-label="واتساب">
+  <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.5 12.4c-.3-.1-1.7-.8-2-.9s-.5-.1-.7.1-.8.9-.9 1.1-.3.2-.6.1c-1-.5-2-1.200-2.800-2.400-.2-.4.2-.4.600-1.200.1-.2 0-.3 0-.5l-.9-2.100c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.500s1.100 2.900 1.200 3.100c.1.2 2.100 3.200 5.100 4.500 1.900.8 2.600.7 3.500.6.6-.1 1.700-.7 2-1.400.2-.7.2-1.300.2-1.400s-.3-.2-.6-.3z"/></svg>
+</a>
+
+<script>
+/* ← غيّر: رقم الواتساب بصيغة دولية بدون + (مصر: 20 ثم الرقم بدون الصفر الأول) */
+var WHATSAPP_NUMBER = "201153017668";
+/* ← غيّر: رابط الموقع على خرائط جوجل */
+var MAP_LINK = "https://goo.gl/maps/tRrqiH2Tp8ZpggEP9?g_st=ac";
+/* ← غيّر: نص رسالة الحجز الجاهزة */
+function buildMessage(s){
+  var m = "مرحباً كوافير بداية 🌸\nأرغب في حجز موعد";
+  return s ? m + " لخدمة: " + s : m;
+}
+document.querySelectorAll(".wa-link").forEach(function(a){
+  a.href = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(buildMessage(a.dataset.service || ""));
+  a.target = "_blank"; a.rel = "noopener";
+});
+document.querySelectorAll(".map-link").forEach(function(a){ a.href = MAP_LINK; });
+document.getElementById("yr").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
